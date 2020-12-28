@@ -147,11 +147,15 @@
                             <h5>Logo image</h5>
                         </div>
                         <div class=" border d-flex justify-content-center">
+                          <% if @logo.image.attached? %>
+                            <%= image_tag @logo.image, style: "width:70%",  class: "pl-4 pr-4"%>
+                            <% else %>
                             <img src="/assets/pexels-photo-704748.jpeg" alt="" style="width: 70%;" class="pl-4 pr-4">
+                        <% end %>
                         </div>
                         <div class="d-flex flex-row mb-2">
                             <button class="btn btn-white btn-block border" style="margin-top: inherit;">Change</button>
-                            <button class="btn btn-white btn-block border" style="margin-top: inherit;">Edit</button>
+                          <%= link_to 'Edit', edit_logo_path(@logo.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
                             <button class="btn btn-white btn-block border" style="margin-top: inherit;">Remove</button>
                         </div>
                         <h6>Custom logo width</h6>
@@ -288,7 +292,11 @@
                 <!-- <h1><span id = "sortable-9"></span></h1> -->
                 <div style="border-bottom-style:solid;border-bottom-color: rgb(172, 172, 172); border-width: 2px;align-items: center;" class="d-flex">
                     <div class="col-4">
+                      <% if @logo.image.attached? %>
+                        <%= image_tag @logo.image, style: "width:30%",  class: "p-2"%>
+                      <% else %>
                         <img src="/assets/pexels-photo-704748.jpeg" alt="" style="width: 30%;" class="p-2">
+                      <% end %>
                     </div>
                    <div class="col-4 text-center">
                        <a href="" class="btn btn-link"><h4 class="text-success" style="font-family: fangsong;"><u> Home-1</u></h4></a>
