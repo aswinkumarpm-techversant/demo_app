@@ -193,7 +193,8 @@
                         </div>
                         <div class="mt-2">
                             <h6>Text</h6>
-                            <input type="submit" class="form-control" value=<%= @text.content %> >
+                            <input type="submit" class="form-control" value=                          <% template = Liquid::Template.parse("{{ user }}") %>
+                              <%= template.render("user" => @text.content).html_safe %> >
                           <%= link_to 'Edit', edit_text_path(@text.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
 
                         </div>
