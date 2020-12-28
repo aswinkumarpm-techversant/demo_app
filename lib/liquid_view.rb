@@ -34,3 +34,5 @@ class LiquidView
     false
   end
 end
+
+ActionView::Template.register_template_handler :liquid, LiquidView

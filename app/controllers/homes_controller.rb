@@ -2,6 +2,7 @@ class HomesController < ApplicationController
 
   def index
     @logo = Logo.first
+    @text = Text.first
 
   end
 
