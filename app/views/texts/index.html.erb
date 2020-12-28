@@ -1,6 +1,0 @@
-{{ "adam!" | capitalize | prepend: "Hello " }}
-<% template = Liquid::Template.parse("Hi ,%{
-{{ user }}
-}") %>
-<%= template.render("user" => @text.content).html_safe %>
-
