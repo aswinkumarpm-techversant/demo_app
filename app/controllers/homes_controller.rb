@@ -10,6 +10,12 @@ class HomesController < ApplicationController
     @logo = Logo.find(params[:id])
   end
 
+  def test
+    @logo = Logo.first
+    @text = Text.first
+
+  end
+
   def update
     @logo = Logo.find(params[:id])
     if @logo.update(logo_params)
