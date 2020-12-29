@@ -204,9 +204,7 @@
                         </div>
                         <div class="mt-2">
                             <h6>Text</h6>
-                            <input type="submit" class="form-control" onchange="" value=<% template = Liquid::Template.parse("{{ text }}") %>
-                              <%= template.render("text" => @text.content).html_safe %> >
-                          <%= link_to 'Edit', edit_text_path(@text.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
+                            <input type="text" class="form-control" onchange="headchange()" id="headTest" placeholder="Rename title..">
                         </div>
 
                         <div class="mt-2">
@@ -301,7 +299,7 @@
             </div>
             <div class="content-page-new">
                 <div class="d-flex bg-red p-2" style="justify-content: center;">
-                    <h5 class="text-white" style="font-family: fangsong;"><%= @text.content %></h5>
+                    <h5 class="text-white" style="font-family: fangsong;" id="storeName">New Online Store</h5>
                 </div>
                 <!-- <h1><span id = "sortable-9"></span></h1> -->
                 <div style="border-bottom-style:solid;border-bottom-color: rgb(172, 172, 172); border-width: 2px;align-items: center;" class="d-flex">
@@ -452,9 +450,11 @@
                }
             });
       })
+    const headchange = ()=>{
+        document.getElementById('storeName').innerHTML = document.getElementById('headTest').value 
+    }
 </script>
 <script>
-    // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
       var fileName = $(this).val().split("\\").pop();
       $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
