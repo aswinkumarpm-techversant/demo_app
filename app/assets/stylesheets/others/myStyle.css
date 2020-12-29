@@ -102,10 +102,10 @@ width: 75%;
     border-radius: 4px;
 }
 
-.logo-image {
-    display:block;
+.test1 {
+    display:block !important;
 }
-.blue{
+.logo-image{
     display:none;
 }
 

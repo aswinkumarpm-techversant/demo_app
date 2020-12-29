@@ -155,7 +155,8 @@
                         </div>
                         <div class="d-flex flex-row mb-2">
                             <button class="btn btn-white btn-block border" style="margin-top: inherit;">Change</button>
-                          <%= link_to 'Edit', edit_logo_path(@logo.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
+                          <button class="btn btn-white btn-block border test" style="margin-top: inherit;">Edit</button>
+
                             <button class="btn btn-white btn-block border" style="margin-top: inherit;">Remove</button>
                         </div>
                       <div class="logo-image">
@@ -199,10 +200,17 @@
                         </div>
                         <div class="mt-2">
                             <h6>Text</h6>
-                            <input type="submit" class="form-control" value=                          <% template = Liquid::Template.parse("{{ text }}") %>
+                            <input type="submit" class="form-control" value=<% template = Liquid::Template.parse("{{ text }}") %>
                               <%= template.render("text" => @text.content).html_safe %> >
-                          <%= link_to 'Edit', edit_text_path(@text.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
+                          <%#= link_to 'Edit', edit_text_path(@text.id), class: "btn btn-white btn-block border" , style:"margin-top: inherit;"  %>
                         </div>
+
+                      <div>
+                        <%= form_with model: @text do |fo| %>
+                          <%= form.text_field :content, placeholder: "Enter The Store Title" %>
+                          <%= form.submit "Submit" %>
+                        <% end %>
+                      </div>
 
                         <div class="mt-2">
                             <h6>Link</h6>
@@ -480,7 +488,10 @@
                 $('#main_sidebar').removeClass('d-none')
                 $('#imageedit_bar').addClass('d-none')
             })
-            
+            $(".test").click(function(){
+                $(".logo-image").toggleClass("test1");
+            });
+
             console.log(document.getElementById('side-menu').children)
 
             document.getElementById('text_content').value = document.getElementById('image_para').innerHTML
@@ -489,8 +500,6 @@
 
 <script>
     $(document).ready(function(){
-        $("button").click(function(){
-            $("logo-image").toggleClass("blue");
-        });
+
     });
 </script>
