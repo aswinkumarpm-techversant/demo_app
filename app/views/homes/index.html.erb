@@ -206,7 +206,7 @@
                         </div>
 
                       <div>
-                        <%= form_with model: @text do |fo| %>
+                        <%= form_with model: @text do |form| %>
                           <%= form.text_field :content, placeholder: "Enter The Store Title" %>
                           <%= form.submit "Submit" %>
                         <% end %>
