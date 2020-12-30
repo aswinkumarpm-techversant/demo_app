@@ -167,7 +167,8 @@
                             </label>
                         </div>
                         <div>
-                            <h5>Logo image</h5>
+                          <% template = Liquid::Template.parse("<h5>Logo image</h5>") %>
+                          <%= template.render.html_safe %>
                         </div>
                         <div class=" border d-flex justify-content-center">
                         <% if @logo.image.attached? %>
