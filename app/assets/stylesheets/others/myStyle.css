@@ -108,4 +108,8 @@ width: 75%;
 .logo-image{
     display:none;
 }
-
+.showimg{
+    padding:5rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
