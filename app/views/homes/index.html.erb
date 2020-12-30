@@ -172,7 +172,8 @@
                         </div>
                         <div class=" border d-flex justify-content-center">
                         <% if @logo.image.attached? %>
-                            <%= image_tag @logo.image, style: "width:70%",  class: "pl-4 pr-4"%>
+                            <%#= image_tag @logo.image, style: "width:70%",  class: "pl-4 pr-4"%>
+                            <img src="<%= url_for(@logo.image) %>" alt="" style="width: 70%;" class="pl-4 pr-4">
                         <% else %>
                             <img src="/assets/pexels-photo-704748.jpeg" alt="" style="width: 70%;" class="pl-4 pr-4">
                         <% end %>
