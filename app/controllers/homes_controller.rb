@@ -12,11 +12,10 @@ class HomesController < ApplicationController
 
   def test
     @logo = Logo.first
-    puts "***********\n\n\n\n"
-    puts @logo.image.to_s
-    puts "\n\n***********\n\n\n\n"
     @text = Text.first
-    unless @logo.nil?
+    if @logo.nil?
+      @path = nil
+    else
       @path = rails_blob_path(@logo.image)
     end
     @image_path = @logo.image_on_disk
