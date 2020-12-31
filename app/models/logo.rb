@@ -8,11 +8,8 @@ class Logo < ApplicationRecord
     }
   end
 
-  # def image_storage_path
-  #   ActiveStorage::Blob.service.path_for(image.key)
-  # end
-  #
   def image_on_disk
+    #ActiveStorage::Blob.service.path_for(image.key)
     ActiveStorage::Blob.service.send(:path_for, image.key)
   end
 
