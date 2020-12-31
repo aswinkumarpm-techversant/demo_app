@@ -16,8 +16,10 @@ class HomesController < ApplicationController
     puts @logo.image.to_s
     puts "\n\n***********\n\n\n\n"
     @text = Text.first
-    @path = rails_blob_path(@logo.image)
-    @image_path=@logo.image_on_disk
+    unless @logo.nil?
+      @path = rails_blob_path(@logo.image)
+    end
+    @image_path = @logo.image_on_disk
   end
 
   def update
@@ -33,6 +35,7 @@ class HomesController < ApplicationController
   end
 
   private
+
   def logo_params
     params.require(:logo).permit(:image)
   end
