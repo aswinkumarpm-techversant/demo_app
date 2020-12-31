@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "homes#index"
+  root to: "homes#main_page"
   get 'homes/index'
   get 'homes/main_page'
   post 'logos/upload_image'
