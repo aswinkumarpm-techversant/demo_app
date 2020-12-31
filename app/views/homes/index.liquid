@@ -1,0 +1,458 @@
+<div id="wrapper">
+
+  <!-- Topbar Start -->
+  <div class="navbar-custom bg-white shadow d-flex" style="justify-content: space-between;height:60px;">
+    <div class="d-flex">
+      <div class="pr-2 d-center" style="border-right-style:solid;border-width: 1px;border-color:rgb(179, 179, 179);">
+        <button class="btn btn-white" id="sign_out"><i class="mdi mdi-arrow-expand-left mdi-20 ml-2"></i></button>
+        <div class="text-dark d-none" id="exit">
+          Exit
+        </div>
+      </div>
+      <div class="d-center pl-2 text-dark" id="debut_div" style="width: 200px;">
+        <span  id="debut">Debut</span>
+      </div>
+      <div class="d-center mr-2">
+        <button class="btn btn-white"><i class="fa fa-undo mdi-20"></i></button>
+      </div>
+      <div class="d-center">
+        <button class="btn btn-white"><i class="fa fa-redo mdi-20"></i></button>
+      </div>
+      <div class="d-center pl-3">
+        <input type="text" class="form-control" value="Home Page">
+      </div>
+    </div>
+
+    <div class="d-center pl-3">
+      <button class="btn btn-white mr-2"><i class="mdi mdi-television mdi-20"></i></button>
+      <button class="btn btn-rounded btn-sm btn-live mr-2">
+        <i class="fa fa-circle text-red mr-1" style="font-size: 12px;"></i><span class="text-dark">Live</span>
+      </button>
+      <button class="btn btn-secondary mr-2">Save</button>
+    </div>
+  </div>
+  <!-- end Topbar -->
+
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class="left-side-menu-new border">
+    <!-- <div class="slimscroll-menu"> -->
+    <div class="ml-2 mr-2" id="main_sidebar">
+      <div style="margin-bottom: 63%;">
+        <h5 class="text-secondary">TEMPLATE</h5>
+        <h2>Home Page</h2>
+        <div id="sidebar-menu">
+          <ul class="metismenu" id="side-menu">
+
+            <li class="menu-title handle">Navigation</li>
+
+            <li class="card" id="side_header">
+              <a href="javascript:void(0)">
+                <span class="bg-light border p-1 mr-1"><i class="mdi mdi-page-layout-header pl-1"></i></span>
+                <span> Header</span>
+              </a>
+            </li>
+
+            <li class="card mb-0 border drag" id="0">
+              <a href="javascript:void(0)">
+                <span class="bg-light border p-1 mr-1"><i class="mdi mdi mdi-image-area pl-1"></i></span>
+                <span id="image_with_text1"> Image with text </span>
+                <span class="float-right"><i class="mdi mdi-drag mdi-20"></i></span>
+                <span class="float-right mr-1"><i class="mdi mdi-eye mdi-20"></i></span>
+              </a>
+            </li>
+            <li class="card mb-0 border drag" id="1">
+              <a href="javascript:void(0)">
+                <span class="bg-light border p-1 mr-1"><i class="mdi mdi-tag pl-1"></i></span>
+                <span> Featured product </span>
+                <span class="float-right"><i class="mdi mdi-drag mdi-20"></i></span>
+                <span class="float-right mr-1"><i class="mdi mdi-eye mdi-20"></i></span>
+              </a>
+            </li>
+            <li class="card mb-0 border drag" id="2">
+              <a href="javascript:void(0)">
+                <span class="bg-light border p-1 mr-1"><i class="mdi mdi-image-area pl-1"></i></span>
+                <span> Image with text</span>
+                <span class="float-right"><i class="mdi mdi-drag mdi-20"></i></span>
+                <span class="float-right mr-1"><i class="mdi mdi-eye mdi-20"></i></span>
+              </a>
+            </li>
+            <li class="card border">
+              <a href="javascript:void(0)"  >
+                <span class="bg-light border p-1 mr-1 text-info"><i class="mdi mdi-border-outside pl-1"></i></span>
+                <span class="text-info"> Add section </span>
+              </a>
+            </li>
+
+            <li class="card">
+              <a href="javascript:void(0)">
+                <span class="bg-light border p-1 mr-1"><i class="mdi mdi-page-layout-footer pl-1"></i></span>
+                <span> Footer</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-secondary">THEME</h5>
+        <h4>Debut</h4>
+        <div id="sidebar-menu">
+          <ul class="metismenu" id="side-menu">
+            <li class="mb-0 border-top">
+              <a href="">
+                <span class="mr-1"><i class="mdi mdi mdi-settings mdi-24px mt-1 pl-1"></i></span>
+                <span> Theme settings </span>
+                <span class="float-right"><i class="mdi mdi-chevron-right mt-1 mdi-24px"></i></span>
+              </a>
+            </li>
+            <li class="mb-0 border-top">
+              <a href="">
+                <span class="mr-1"><i class="mdi mdi mdi-palette-advanced mdi-24px mt-1 pl-1"></i></span>
+                <span> Theme actions </span>
+                <span class="float-right"><i class="mdi mdi-dots-horizontal mt-1 mdi-24px"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- End Sidebar -->
+
+    <!-- header edit  -->
+    <div style="border-style: solid;border-radius: 0.5rem;border-width: 1px;border-color: rgb(180, 180, 180);" class="m-2 d-none" id="header_bar">
+      <div class="card p-2 card-top" style="display: flex;flex-flow: row;justify-content: space-between;">
+        <button class="btn btn-sm btn-white" id="back"><i class="mdi mdi-chevron-left mdi-24px"></i></button>
+        <h5>Header</h5>
+        <div></div>
+      </div>
+      <div class="pl-3">
+        <h5 class="text-secondary">Settings</h5>
+      </div>
+      <div class="card p-3">
+        <h6>Logo Alignment</h6>
+        <div class="radio radio-primary">
+          <input type="radio" name="radio" id="radioleft" value="option3">
+          <label for="radioleft">
+            Left
+          </label>
+        </div>
+        <div class="radio radio-primary">
+          <input type="radio" name="radio" id="radioright" value="option4">
+          <label for="radioright">
+            Right
+          </label>
+        </div>
+        <div>
+          <h5>Logo image</h5>
+        </div>
+        <div class=" border d-flex justify-content-center">
+          <img src="/assets/pexels-photo-704748.jpeg" alt="" style="width: 70%;" class="pl-4 pr-4">
+        </div>
+        <div class="d-flex flex-row mb-2">
+          <button class="btn btn-white btn-block border" style="margin-top: inherit;">Change</button>
+          <button class="btn btn-white btn-block border" style="margin-top: inherit;">Edit</button>
+          <button class="btn btn-white btn-block border" style="margin-top: inherit;">Remove</button>
+        </div>
+        <h6>Custom logo width</h6>
+        <div>
+          <input type="range" id="points" name="points" min="0" max="110px" step="10">
+          <label for="points">110px</label>
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+          <a href="" class="p-1"><h6>Menu</h6></a>
+          <a href="" class="btn-primary btn-link p-1"><h6 class="text-primary">Edit menu</h6></a>
+        </div>
+        <div class="box-border p-2 mb-3">
+          <h6>Main menu-2 </h6>
+          <div class="d-flex flex-row justify-content-center mt-2">
+            <button class="btn btn-sm btn-white border btn-block" style="margin-top:inherit;">Change</button>
+            <button class="btn btn-sm btn-white border btn-block" style="margin-top:inherit;">Remove</button>
+          </div>
+        </div>
+        <div style="border-top-style: solid;border-top-width: 1px;border-top-color: rgb(184, 180, 180);">
+          <h5 class="mt-3">ANNOUNCEMENT BAR</h5>
+          <div class="d-flex flex-column">
+            <div class="radio radio-primary mb-2 mt-1">
+              <input type="radio" name="radio" id="radio3" value="option3">
+              <label for="radio3">
+                Show announcement
+              </label>
+            </div>
+            <div class="radio radio-primary">
+              <input type="radio" name="radio" id="radio4" value="option4">
+              <label for="radio4">
+                Home page only
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2">
+          <h6>Text</h6>
+          <input type="text" class="form-control" value="New Online Store">
+        </div>
+        <div class="mt-2">
+          <h6>Link</h6>
+          <div class="d-flex flex-row">
+            <input type="text" class="form-control mr-1" placeholder="Place a link or search">
+            <button class="btn btn-white btn-sm border"><i class="mdi mdi-close-circle text-secondary"></i></button>
+          </div>
+        </div>
+        <div class="mt-2">
+          <h6>Optional</h6>
+          <div class="d-flex flex-column">
+            <div>
+              <button class="btn btn-danger p-2 pl-3 border mr-1"></button>
+              <label for="btn">Bar</label>
+            </div>
+            <div class="mt-1">
+              <button class="btn btn-white p-2 pl-3 border mr-1"></button>
+              <label for="btn">Text</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar-menu">
+        <ul class="metismenu" id="side-menu">
+          <li class="mb-0 border-top">
+            <a href="">
+              <span class="mr-1"><i class="mdi mdi mdi-settings mdi-24px mt-1 pl-1"></i></span>
+              <span> Theme settings </span>
+              <span class="float-right"><i class="mdi mdi-chevron-right mt-1 mdi-24px"></i></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- image with text sidebar  -->
+    <div style="border-style: solid;border-radius: 0.5rem;border-width: 1px;border-color: rgb(180, 180, 180);" class="m-2 d-none" id="imageedit_bar">
+      <div class="card p-2 card-top" style="display: flex;flex-flow: row;justify-content: space-between;">
+        <button class="btn btn-sm btn-white" id="back_image1"><i class="mdi mdi-chevron-left mdi-24px"></i></button>
+        <h5 class="mr-3">Image with text</h5>
+        <div><i class="mdi mdi-dots-horizontal mdi-24px mr-2"></i></div>
+      </div>
+      <div class="pl-3">
+        <h5 class="text-secondary">Settings</h5>
+      </div>
+      <div class="card p-3">
+        <h6>Image</h6>
+        <div class="d-flex border flex-column justify-content-center p-5">
+          <button class="btn btn-white border">Select Image</button>
+          <div class="text-center mt-2"><a href="">Explore free images</a></div>
+        </div>
+        <div class="mt-2">
+          <h6>Image alignment</h6>
+          <select name="alignment" id="alignment" class="form-control">
+            <option value="left" selected>Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+        <div class="mt-2">
+          <h6>Heading</h6>
+          <input type="text" class="form-control" value="Image with text">
+        </div>
+        <div class="mt-2">
+          <h6>Text</h6>
+
+          <textarea name="text" id="text_content" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+        <div class="mt-2">
+          <h6>Button label</h6>
+          <input type="text" class="form-control" value="buy now">
+        </div>
+        <div class="mt-2">
+          <h6> Button link</h6>
+          <div class="d-flex flex-row">
+            <input type="text" class="form-control mr-1" placeholder="Place a link or search">
+            <button class="btn btn-white btn-sm border"><i class="mdi mdi-close-circle text-secondary"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar-menu">
+        <ul class="metismenu" id="side-menu">
+          <li class="mb-0 border-top">
+            <a href="">
+              <span class="mr-1"><i class="mdi mdi mdi-settings mdi-24px mt-1 pl-1"></i></span>
+              <span> Theme settings </span>
+              <span class="float-right"><i class="mdi mdi-chevron-right mt-1 mdi-24px"></i></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="content-page-new">
+    <div class="d-flex bg-red p-2" style="justify-content: center;">
+      <h5 class="text-white" style="font-family: fangsong;">New Online Store</h5>
+    </div>
+    <h1><span id = "sortable-9"></span></h1>
+    <div style="border-bottom-style:solid;border-bottom-color: rgb(172, 172, 172); border-width: 2px;align-items: center;" class="d-flex">
+      <div class="col-4">
+        <img src="/assets/pexels-photo-704748.jpeg" alt="" style="width: 30%;" class="p-2">
+      </div>
+      <div class="col-4 text-center">
+        <a href="" class="btn btn-link"><h4 class="text-success" style="font-family: fangsong;"><u> Home-1</u></h4></a>
+        <a href="" class="btn btn-link"><h4 class="text-success" style="font-family: fangsong;">Catalog-2</h4></a>
+      </div>
+      <div  class="col-4" style="margin-left: auto;">
+        <a href="" class="btn btn-white btn-sm float-right"><i class="mdi mdi-magnify mdi-24px text-success"></i></a>
+        <a href="" class="btn btn-white btn-sm float-right"><i class="mdi mdi-cart-outline mdi-24px text-success"></i></a>
+      </div>
+    </div>
+    <div id="mainbar" class="d-flex flex-column">
+      <!-- image with text -->
+      <div class="d-flex container" id="a">
+        <div class="col-6 p-3" style="display: flex;flex-flow: column;">
+          <h1 class="text-success float-left pt-5" style="font-weight: 500;">Image with text</h1>
+          <div class="float-left">
+            <p class="text-primary" id="image_para" style="font-size: 1.3rem;font-family: ui-rounded;">Pair large text with an image to give focus to your <br> chosen product,collection, or blog post. Add details <br> on availability, style, or even provide a review.</p>
+          </div>
+          <button class="btn btn-dark newfont" style="width: 20%;">BUY NOW</button>
+        </div>
+        <div class="col-6 d-flex" style="justify-content: center;align-items: center">
+          <span class="m-3 img-border" style="padding:5rem;padding-left: 9rem;padding-right: 9rem;"><i class="mdi mdi-image-area text-info" style="font-size: 12rem;"></i></span>
+        </div>
+      </div>
+      <!-- products name  -->
+      <div class="d-flex container" id="b">
+        <div class="col-6 d-flex" style="justify-content: center;align-items: center">
+          <span class="m-3 img-border" style="padding:5rem;padding-left: 9rem;padding-right: 9rem;"><i class="mdi mdi-playstation text-info" style="font-size: 12rem;"></i></span>
+        </div>
+        <div class="col-6 p-3" style="display: flex;flex-flow: column;">
+          <h1 class="text-success float-left pt-5" style="font-weight: 500;">Your product's name</h1>
+          <h4 class="text-blue-new mb-2">Rs. 17.77</h4>
+          <button class="btn btn-secondary newfont btn-disable" style="width: 65%;font-family: ui-rounded;">SOLD OUT</button>
+          <div class="float-left mt-4">
+            <p class="text-blue-new" style="font-size: 1.2rem;font-family: ui-rounded;">This area is used to describe your product’s details. Tell<br> customers about the look, feel, and style of your product. Add <br> details on color, materials used, sizing, and where it was made.</p>
+          </div>
+          <div style="display: flex;flex-flow: row nowrap;">
+            <button class="btn btn-white border btn-sm mr-1">
+              <div class="d-flex" style="flex-flow: row;align-items: center;">
+                <i class="mdi mdi-facebook-box mdi-24px text-info mr-1"></i><span class="text-green">SHARE</span>
+              </div>
+            </button>
+            <button class="btn btn-white border btn-sm mr-1">
+              <div class="d-flex" style="flex-flow: row;align-items: center;">
+                <i class="mdi mdi-twitter mdi-24px text-primary mr-1"></i><span class="text-green">TWEET</span>
+              </div>
+            </button>
+            <button class="btn btn-white border btn-sm mr-1">
+              <div class="d-flex" style="flex-flow: row;align-items: center;">
+                <i class="mdi mdi-pinterest-box mdi-24px text-danger mr-1"></i><span class="text-green">PIN IT</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- image with text  -->
+      <div class="d-flex container" id="c">
+        <div class="col-6 p-3" style="display: flex;flex-flow: column;">
+          <h1 class="text-success float-left pt-5" style="font-weight: 500;">Image with text</h1>
+          <div class="float-left">
+            <p class="text-primary" style="font-size: 1.3rem;font-family: ui-rounded;">Pair large text with an image to give focus to your <br> chosen product,collection, or blog post. Add details <br> on availability, style, or even provide a review.</p>
+          </div>
+          <button class="btn btn-dark newfont" style="width: 20%;">BUY NOW</button>
+        </div>
+        <div class="col-6 d-flex" style="justify-content: center;align-items: center">
+          <span class="m-3 img-border" style="padding:5rem;padding-left: 9rem;padding-right: 9rem;"><i class="mdi mdi-image-area text-info" style="font-size: 12rem;"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-black">
+      <div class="col-3 d-flex p-5" style="flex-flow: column;justify-content: flex-start">
+        <div>
+          <h2 class="text-white mb-2" style="font-weight: 500;">Quick links</h2>
+          <h5 class="text-white newfont" style="font-weight: 500;">Search</h5>
+        </div>
+      </div>
+      <div class="col-4 d-flex p-5" style="flex-flow: column;justify-content: flex-start">
+        <div>
+          <h3 class="text-white mb-2" style="font-weight: 500;">Talk about your <br>business</h3>
+          <h5 class="text-white newfont" style="font-weight: 500;">Share store details,<br> promotions, or brand content <br> with your customers.</h5>
+        </div>
+      </div>
+      <div class="col-5 d-flex p-5" style="flex-flow: column;align-items: inherit;justify-content:space-between;height: 40vh;">
+        <div>
+          <h3 class="text-white mb-2" style="font-weight: 500;">Newsletter</h3>
+          <div class="d-flex" style="flex-flow: row nowrap;">
+            <input type="text" placeholder="Email address" class="form-control" style="border-radius: inherit;">
+            <button class="btn btn-sub newfont">SUBSCRIBE</button>
+          </div>
+        </div>
+        <div class="d-flex" style="flex-flow: column wrap;align-items: flex-end;">
+          <i class="mdi mdi-facebook-box mdi-36px text-white"></i>
+          <small class="text-white newfont">© 2020, shoetheme Powered by 69shops</small>
+        </div>
+      </div>
+    </div>
+    <!-- <style>
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style> -->
+  </div>
+
+</div>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#side-menu" ).sortable({items: "> .drag"});
+        $( "#side-menu" ).sortable( "option", "items", "> .drag");
+        $('#side-menu').sortable({
+            update: function(event, ui) {
+                var productOrder = $(this).sortable('toArray')
+                console.log(productOrder,['2','0','1'])
+                $('#a').attr('style',`order:${productOrder[0]};`)
+                console.log(`first element at ${productOrder[0]}`)
+                $('#b').attr('style',`order:${productOrder[1]};`)
+                console.log(`second element at ${productOrder[1]}`)
+                $('#c').attr('style',`order:${productOrder[2]};`)
+                console.log(`third element at ${productOrder[2]}`)
+                $("#sortable-9").text (productOrder);
+            }
+        });
+    })
+</script>
+
+<script>
+    $(document).ready(()=>{
+        $('#side_header').on('click',()=>{
+            $('#main_sidebar').addClass('d-none')
+            $('#header_bar').removeClass('d-none')
+        })
+        $('#back').on('click',()=>{
+            $('#main_sidebar').removeClass('d-none')
+            $('#header_bar').addClass('d-none')
+        })
+
+        $('#sign_out').on('mouseenter',()=>{
+            $('#debut').addClass('d-none')
+            $('#exit').removeClass('d-none')
+            $('#debut_div').attr('style','width: 176px;')
+        })
+        $('#sign_out').on('mouseleave',()=>{
+            $('#debut').removeClass('d-none')
+            $('#exit').addClass('d-none')
+            $('#debut_div').attr('style','width: 200px;')
+        })
+
+        $('#image_with_text1').on('click',()=>{
+            console.log("ANANTHU")
+            $('#main_sidebar').addClass('d-none')
+            $('#imageedit_bar').removeClass('d-none')
+        })
+        $('#back_image1').on('click',()=>{
+            $('#main_sidebar').removeClass('d-none')
+            $('#imageedit_bar').addClass('d-none')
+        })
+
+        console.log(document.getElementById('side-menu').children)
+
+        document.getElementById('text_content').value = document.getElementById('image_para').innerHTML
+    })
+</script>

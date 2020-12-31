@@ -81,8 +81,9 @@
 .justify-content-between{
     justify-content: space-between;
 }
-.card-top{
-    border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;
+.card-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 .logo-image form{
@@ -113,3 +114,4 @@ width: 75%;
     padding-left: 9rem;
     padding-right: 9rem;
 }
+
