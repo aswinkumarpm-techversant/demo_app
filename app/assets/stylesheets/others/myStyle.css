@@ -81,6 +81,37 @@
 .justify-content-between{
     justify-content: space-between;
 }
-.card-top{
-    border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;
+.card-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
 }
+
+.logo-image form{
+    display: flex;
+
+}
+
+.logo-image form #logo_image {
+width: 75%;
+}
+
+.logo-image form input:last-child{
+    margin-left: auto;
+    background: #2d75ff;
+    border: 1px solid #2d75ff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.test1 {
+    display:block !important;
+}
+.logo-image{
+    display:none;
+}
+.showimg{
+    padding:5rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
+

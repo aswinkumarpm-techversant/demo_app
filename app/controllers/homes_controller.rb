@@ -10,10 +10,14 @@ class HomesController < ApplicationController
     @logo = Logo.find(params[:id])
   end
 
-  def test
+  def main_page
     @logo = Logo.first
     @text = Text.first
-
+    if @logo.image.attached?
+      @path = rails_blob_path(@logo.image)
+    else
+      @path = nil
+    end
   end
 
   def update
@@ -29,6 +33,7 @@ class HomesController < ApplicationController
   end
 
   private
+
   def logo_params
     params.require(:logo).permit(:image)
   end
