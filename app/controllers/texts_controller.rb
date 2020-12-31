@@ -1,7 +1,6 @@
 class TextsController < ApplicationController
   def index
     @text = Text.first
-    puts @text
     respond_to do |format|
       format.html # index.html.erb
     end
