@@ -10,7 +10,7 @@ class HomesController < ApplicationController
     @logo = Logo.find(params[:id])
   end
 
-  def test
+  def main_page
     @logo = Logo.first
     @text = Text.first
     if @logo.image.attached?

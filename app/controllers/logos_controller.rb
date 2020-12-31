@@ -25,7 +25,7 @@ class LogosController < ApplicationController
   def upload_image
     @logo = Logo.first
     if @logo.update(image: params[:image])
-      redirect_to homes_test_path
+      redirect_to homes_main_page_path
     else
       render 'edit'
     end
