@@ -13,12 +13,11 @@ class HomesController < ApplicationController
   def test
     @logo = Logo.first
     @text = Text.first
-    if @logo.nil?
-      @path = nil
-    else
+    if @logo.image.attached?
       @path = rails_blob_path(@logo.image)
+    else
+      @path = nil
     end
-    @image_path = @logo.image_on_disk
   end
 
   def update
