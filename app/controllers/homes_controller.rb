@@ -12,8 +12,12 @@ class HomesController < ApplicationController
 
   def test
     @logo = Logo.first
+    puts "***********\n\n\n\n"
+    puts @logo.image.to_s
+    puts "\n\n***********\n\n\n\n"
     @text = Text.first
-
+    @path = rails_blob_path(@logo.image)
+    @image_path=@logo.image_on_disk
   end
 
   def update
