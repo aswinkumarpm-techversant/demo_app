@@ -195,13 +195,13 @@
                     <button class="btn btn-white btn-block border" style="margin-top: inherit;">Remove</button>
                 </div>
                 <div class="logo-image">
-                    <%= form_with model: @logo, class:"d-flex flex-column mt-1", local: true do |form| %>
-                    <div class="custom-file">
-                        <%= form.file_field :image , class:"custom-file-input" %>
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                    </div>
-                    <%= form.submit "Submit", class:"btn btn-block mt-2 mb-2 btn-sm" %>
-                    <% end %>
+                    <form action="/logos/upload_image" method="post" enctype="multipart/form-data" class="d-flex flex-column mt-1">
+                        <div class="custom-file">
+                        <label class="custom-file-label" for="customFile">Choose File:</label>
+                        </div>
+                        <input type="file" id="image" name="image" class="custom-file-input">
+                        <button class="btn btn-block mt-2 mb-2 btn-sm">Submit</button>
+                    </form>
 
                 </div>
                 <h6>Custom logo width</h6>
